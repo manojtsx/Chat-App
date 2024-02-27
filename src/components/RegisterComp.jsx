@@ -1,5 +1,5 @@
 import React from 'react'
-import InputText from './mini-components/InputText';
+import InputBox from './mini-components/InputBox';
 
 const RegisterComp = () => {
   const registerUser = (event) =>{
@@ -9,7 +9,9 @@ const RegisterComp = () => {
     <div>
       <h1>Registration Form - Chat App</h1>
       <form  onSubmit={registerUser}>
-        <InputText type="text" />
+        <InputBox type="text" placeholder="Enter your name"/>
+        <InputBox type="text" placeholder="Enter your username"/>
+        <InputBox type="password" placeholder="Enter your password"/>
       </form>
     </div>
   )
