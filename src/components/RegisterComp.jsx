@@ -11,16 +11,16 @@ const RegisterComp = () => {
   return (
     <div className="h-screen flex justify-center items-center flex-col gap-10">
       <Heading>Registration Form - Chat App</Heading>
-      <form onSubmit={registerUser} className="">
-        <div>
+      <form onSubmit={registerUser} className="flex flex-col gap-5 bg-gradient-to-r from-pink-500 to-pink-700 p-5 rounded-md text-white">
+        <div className="flex justify-between items-center">
           <FormLabel htmlFor="name">Name: </FormLabel>
           <InputBox type="text" name="name" placeholder="Enter your name" required/>
         </div>
-        <div>
+        <div className="flex justify-between items-center">
           <FormLabel htmlFor="username">Useraname: </FormLabel>
         <InputBox type="text" name="username" placeholder="Enter your username" required/>
         </div>
-        <div>
+        <div className="flex justify-between items-center">
         <FormLabel htmlFor="password">Password: </FormLabel>
         <InputBox type="password" name="password" placeholder="Enter your password" required/>
         </div>
