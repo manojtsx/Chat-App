@@ -2,6 +2,7 @@ import React from "react";
 import InputBox from "./mini-components/InputBox";
 import FormLabel from "./mini-components/FormLabel";
 import Button from "./mini-components/Button";
+import Heading from "./mini-components/Heading";
 
 const RegisterComp = () => {
   const registerUser = (event) => {
@@ -9,7 +10,7 @@ const RegisterComp = () => {
   };
   return (
     <div className="h-screen flex justify-center items-center flex-col gap-10">
-      <h1>Registration Form - Chat App</h1>
+      <Heading>Registration Form - Chat App</Heading>
       <form onSubmit={registerUser} className="">
         <div>
           <FormLabel htmlFor="name">Name: </FormLabel>
