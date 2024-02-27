@@ -1,20 +1,32 @@
-import React from 'react'
-import InputBox from './mini-components/InputBox';
+import React from "react";
+import InputBox from "./mini-components/InputBox";
+import FormLabel from "./mini-components/FormLabel";
+import Button from "./mini-components/Button";
 
 const RegisterComp = () => {
-  const registerUser = (event) =>{
+  const registerUser = (event) => {
     event.preventDefault();
-  }
+  };
   return (
-    <div>
+    <div className="h-screen flex justify-center items-center flex-col gap-10">
       <h1>Registration Form - Chat App</h1>
-      <form  onSubmit={registerUser}>
-        <InputBox type="text" placeholder="Enter your name"/>
-        <InputBox type="text" placeholder="Enter your username"/>
-        <InputBox type="password" placeholder="Enter your password"/>
+      <form onSubmit={registerUser} className="">
+        <div>
+          <FormLabel htmlFor="name">Name: </FormLabel>
+          <InputBox type="text" name="name" placeholder="Enter your name" required/>
+        </div>
+        <div>
+          <FormLabel htmlFor="username">Useraname: </FormLabel>
+        <InputBox type="text" name="username" placeholder="Enter your username" required/>
+        </div>
+        <div>
+        <FormLabel htmlFor="password">Password: </FormLabel>
+        <InputBox type="password" name="password" placeholder="Enter your password" required/>
+        </div>
+        <Button type="submit">Register</Button>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default RegisterComp
+export default RegisterComp;
