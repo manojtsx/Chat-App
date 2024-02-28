@@ -17,7 +17,7 @@ const RegisterComp = () => {
           <InputBox type="text" name="name" placeholder="Enter your name" required/>
         </div>
         <div className="flex justify-between items-center">
-          <FormLabel htmlFor="username">Useraname: </FormLabel>
+          <FormLabel htmlFor="username">Username: </FormLabel>
         <InputBox type="text" name="username" placeholder="Enter your username" required/>
         </div>
         <div className="flex justify-between items-center">
