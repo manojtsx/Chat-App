@@ -1,5 +1,6 @@
 import React from 'react'
 import FooterHeading from './mini-components/FooterHeading'
+import FooterLink from './mini-components/FooterLink'
 
 const Footer = () => {
   return (
@@ -10,9 +11,10 @@ const Footer = () => {
           <p>+977-9816683613</p>
           <p>manojbicte@gmail.com</p>
         </div>
-        <div>
+        <div className='flex flex-col'>
           <FooterHeading>Resources</FooterHeading>
-          
+          <FooterLink to="/login">Login</FooterLink>
+          <FooterLink to="/register">Register</FooterLink>
         </div>
         <div>
           <FooterHeading>Locate Us</FooterHeading>
