@@ -11,18 +11,16 @@ const LoginComp = () => {
   return (
     <form onSubmit={loginComp} className="flex flex-col justify-center items-center h-screen gap-5 text-white">
       <Heading className="text-black">Login - Chat App</Heading>
-     <div className="h-[250px] w-[350px] gap-5 bg-gradient-to-r from-pink-500 to-pink-700 flex flex-col justify-center items-center rounded-md">
-      <div className="flex items-center gap-5">
-      <FormLabel htmlFor="username" className="text-white">Username: </FormLabel>
+     <div className="h-[250px] w-[350px] p-5 gap-5 bg-gradient-to-r from-pink-500 to-pink-700 flex flex-col justify-center rounded-md">
+      <div className="flex justify-between items-center gap-5">
+      <FormLabel htmlFor="username">Username: </FormLabel>
       <InputBox type="text" name="username" placeholder="Username" required/>
       </div>
-      <div className="flex items-center gap-5">
+      <div className="flex justify-between items-center gap-5">
       <FormLabel htmlFor="password">Password: </FormLabel>
-      <InputBox type="password" name="password" className="mb" placeholder="Password" required/>
+      <InputBox type="password" name="password" placeholder="Password" required/>
       </div>
-      <div className='w-[300px] bg-black flex justify-center'>
-      <Button type="submit" className="w-full" >Login</Button>
-      </div>
+      <Button type="submit">Login</Button>
      </div>
     </form>
   )
