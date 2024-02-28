@@ -1,6 +1,7 @@
-import React from 'react'
-import FooterHeading from './mini-components/FooterHeading'
-import FooterLink from './mini-components/FooterLink'
+import React from 'react';
+import FooterHeading from './mini-components/FooterHeading';
+import FooterLink from './mini-components/FooterLink';
+import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 
 const Footer = () => {
   return (
@@ -12,7 +13,7 @@ const Footer = () => {
           <p className='text-sm'>manojbicte@gmail.com</p>
           <FooterHeading>Social Links</FooterHeading>
           <div>
-            <FooterLink to="/"></FooterLink>
+            <FooterLink to="/"><FacebookRoundedIcon /></FooterLink>
             <FooterLink to="/"></FooterLink>
             <FooterLink to="/"></FooterLink>
           </div>
