@@ -11,7 +11,7 @@ const LoginComp = () => {
   return (
     <form onSubmit={loginComp} className="flex flex-col justify-center items-center h-screen gap-5 text-white">
       <Heading className="text-black">Login - Chat App</Heading>
-     <div className="h-[250px] w-[350px] p-5 gap-5 bg-gradient-to-r from-pink-500 to-pink-700 flex flex-col justify-center rounded-md">
+     <div className="md:h-[250px] md:w-[350px] p-5 gap-5 bg-gradient-to-r from-pink-500 to-pink-700 flex flex-col justify-center rounded-md">
       <div className="flex justify-between items-center gap-5">
       <FormLabel htmlFor="username">Username: </FormLabel>
       <InputBox type="text" name="username" placeholder="Username" required/>
