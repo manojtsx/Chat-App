@@ -11,15 +11,19 @@ const Navbar = () => {
   ]
 
   const toggleMenu=()=>{
-  Lists.map((list)=>{
-    <li><a href="list.link">list.name</a></li>
-  })
+  
   }
   return (
     <div className="px-4 py-4 fixed top-0 w-full shadow-lg bg-gradient-to-r from-pink-500 to-pink-700"> 
-    <span onClick={toggleMenu}>
+    <span>
       <MenuIcon />
     </span>
+    <ul className="bg-pink-400 flex flex-col items-center justify-between">{
+    Lists.map((list)=>{
+    return(<li><a href={list.link}>{list.name}</a></li>)
+     })
+    }
+    </ul>
     </div>
   )
 }
