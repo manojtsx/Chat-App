@@ -1,31 +1,43 @@
 import React from 'react'
+import { useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 const Navbar = () => {
-  let Lists=[
-    {name:"Home",link:"/"},
-    {name:"About",link:"/about"},
-    {name:"Chat",link:"/chat"},
-    {name:"Login",link:"/login"},
-    {name:"Register",link:"/register"}
+  let lists = [
+    { name: "Home", link: "/" },
+    { name: "About", link: "/about" },
+    { name: "Chat", link: "/chat" },
+    { name: "Login", link: "/login" },
+    { name: "Register", link: "/register" }
   ]
-
-  const toggleMenu=()=>{
-  
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   }
-  return (
-    <div className="px-4 py-4 fixed top-0 w-full shadow-lg bg-gradient-to-r from-pink-500 to-pink-700"> 
-    <span>
-      <MenuIcon />
-    </span>
-    <ul className="bg-pink-400 flex flex-col items-center justify-between">{
-    Lists.map((list)=>{
-    return(<li><a href={list.link}>{list.name}</a></li>)
-     })
-    }
-    </ul>
+  // const handleScroll = () => {
+  //   if(scrollY > 300){
+
+  //   }
+  // }
+return (
+  <div className="w-full">
+    <div className="px-4 py-4 shadow-lg bg-gradient-to-r from-pink-500 to-pink-700 flex justify-end">
+      <span onClick={toggleMenu}>
+        {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
+      </span>
     </div>
-  )
+    {
+      isMenuOpen ? <ul className="bg-gradient-to-r from-pink-500 to-pink-600 absolute w-full">{
+        lists.map((list) => {
+          return (<li className=" w-full shadow-sm p-2 flex justify-center"><a href={list.link}>{list.name}</a></li>)
+        })
+      }
+      </ul> : ""
+    }
+
+  </div>
+)
 }
 
 export default Navbar
