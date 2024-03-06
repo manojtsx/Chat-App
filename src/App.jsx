@@ -4,7 +4,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import GoToTop from "./components/mini-components/GoToTop";
+import GoToTop from "./components/mini-components/reusable-components/GoToTop";
 
 function App() {
   return (

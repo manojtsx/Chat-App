@@ -1,11 +1,11 @@
 import React from 'react';
-import FooterHeading from './mini-components/FooterHeading';
-import FooterLink from './mini-components/FooterLink';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import InputBox from './mini-components/InputBox';
-import Button from './mini-components/Button';
+import FooterHeading from './mini-components/reusable-components/FooterHeading';
+import FooterLink from './mini-components/reusable-components/FooterLink';
+import InputBox from './mini-components/reusable-components/InputBox';
+import Button from './mini-components/reusable-components/Button';
 
 const Footer = () => {
   const submitNewsletter = (event) =>{

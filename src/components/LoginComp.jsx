@@ -1,8 +1,8 @@
 import React from 'react'
-import InputBox from "./mini-components/InputBox";
-import FormLabel from "./mini-components/FormLabel";
-import Button from "./mini-components/Button";
-import Heading from "./mini-components/Heading";
+import InputBox from "./mini-components/reusable-components/InputBox";
+import FormLabel from "./mini-components/reusable-components/FormLabel";
+import Button from "./mini-components/reusable-components/Button";
+import Heading from "./mini-components/reusable-components/Heading";
 
 const LoginComp = () => {
   const loginComp=(event)=>{
