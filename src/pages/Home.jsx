@@ -1,8 +1,11 @@
 import React from 'react'
+import HeroSection from '../components/mini-components/HeroSection'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+    <HeroSection />
+    </>
   )
 }
 
