@@ -45,7 +45,7 @@ return (
     {
       isMenuOpen ? <ul className='bg-gradient-to-r from-pink-500 to-pink-600 absolute w-full'>{
         lists.map((list) => {
-          return (<li className=" w-full shadow-sm p-2 flex justify-center"><a href={list.link}>{list.name}</a></li>)
+          return (<li className=" w-full shadow-sm p-2 flex justify-center hover:bg-pink-700"><a href={list.link}>{list.name}</a></li>)
         })
       }
       </ul> : ""
