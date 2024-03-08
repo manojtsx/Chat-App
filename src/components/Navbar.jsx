@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   let lists = [
@@ -38,7 +38,7 @@ return (
       <ul className="hidden sm:flex justify-center gap-12">
       {
         lists.map((list) => {
-          return (<li className="px-4 h-12 flex items-center hover:bg-pink-700"><Link href={list.link}>{list.name}</Link></li>)
+          return (<li className="px-4 h-12 flex items-center hover:bg-pink-700"><NavLink to={list.link}>{list.name}</NavLink></li>)
         })
       }
       </ul>
@@ -46,7 +46,7 @@ return (
     {
       isMenuOpen ? <ul className='bg-gradient-to-r from-pink-500 to-pink-600 absolute w-full'>{
         lists.map((list) => {
-          return (<li className=" w-full shadow-sm p-2 flex justify-center hover:bg-pink-700"><Link href={list.link}>{list.name}</Link></li>)
+          return (<li className=" w-full shadow-sm p-2 flex justify-center hover:bg-pink-700"><NavLink to={list.link}>{list.name}</NavLink></li>)
         })
       }
       </ul> : ""
