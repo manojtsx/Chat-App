@@ -42,9 +42,7 @@ const AboutSection = () => {
         </ul>
         </div>
       {/*Team Member*/}
-      <div className="mx-5 sm:mx-20">
       <TeamSection />
-      </div >
       {/* User Guidelines and Terms of serivices and privacy policy */}
       <div>
         <TermsOfServices />
