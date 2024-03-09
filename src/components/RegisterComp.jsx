@@ -3,8 +3,10 @@ import InputBox from "./mini-components/reusable-components/InputBox";
 import FormLabel from "./mini-components/reusable-components/FormLabel";
 import Button from "./mini-components/reusable-components/Button";
 import Heading from "./mini-components/reusable-components/Heading";
+import {useNavigate} from "react-router-dom";
 
 const RegisterComp = () => {
+  const navigate = useNavigate();
   const [user, setUser] = useState({
     name : "",
     username : "",
@@ -17,6 +19,7 @@ const RegisterComp = () => {
     const users = JSON.parse(localStorage.getItem("user")) || [];
     users.push(user);
     localStorage.setItem("user",JSON.stringify(users));
+    navigate('/login');
   };
   const handleUserValue = (event) =>{
     setUser({...user, [event.target.name] : event.target.value});
