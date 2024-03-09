@@ -6,7 +6,7 @@ import Register from "./pages/Register";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import GoToTop from "./components/mini-components/reusable-components/GoToTop";
-
+import HomePage from "./pages/HomePage";
 function App() {
   return (
     <>
@@ -17,6 +17,7 @@ function App() {
         <Route path="/about" element={<About/>}/>
         <Route  path="/login" element={<Login />}/>
         <Route  path="/register" element={<Register />}/>
+        <Route path="/homepage" element={<HomePage/>}/>
       </Routes>
       <Footer /> 
       <GoToTop />
