@@ -37,16 +37,16 @@ return (
       </span>
       <ul className="hidden sm:flex justify-center gap-12">
       {
-        lists.map((list) => {
-          return (<li className="px-4 h-12 flex items-center hover:bg-pink-700"><NavLink to={list.link}>{list.name}</NavLink></li>)
+        lists.map((list,index) => {
+          return (<li key={index} className="px-4 h-12 flex items-center hover:bg-pink-700"><NavLink to={list.link}>{list.name}</NavLink></li>)
         })
       }
       </ul>
     </div>
     {
       isMenuOpen ? <ul className='bg-gradient-to-r from-pink-500 to-pink-600 absolute w-full'>{
-        lists.map((list) => {
-          return (<li className=" w-full shadow-sm p-2 flex justify-center hover:bg-pink-700"><NavLink to={list.link}>{list.name}</NavLink></li>)
+        lists.map((list,index) => {
+          return (<li key={index} className=" w-full shadow-sm p-2 flex justify-center hover:bg-pink-700"><NavLink to={list.link}>{list.name}</NavLink></li>)
         })
       }
       </ul> : ""

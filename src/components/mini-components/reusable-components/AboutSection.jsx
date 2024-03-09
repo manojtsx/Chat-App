@@ -27,9 +27,9 @@ const AboutSection = () => {
       <h1 className='text-pink-500 text-2xl font-bold'>Why use Chat App?</h1>
         <ul className='flex flex-col lg:flex-row gap-7 p-5 sm:my-5'>
         {
-          Features.map((feature)=>{
+          Features.map((feature,index)=>{
             return(
-              <li className="p-10 sm:p-16 bg-pink-200 rounded-lg shadow-lg transition-scale duration-500 hover:scale-110">
+              <li key={index} className="p-10 sm:p-16 bg-pink-200 rounded-lg shadow-lg transition-scale duration-500 hover:scale-110">
                 <div className="flex justify-center">
                   {feature.icon}
                 </div>
