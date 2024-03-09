@@ -18,8 +18,8 @@ const LoginComp = () => {
     event.preventDefault();
     try{
     const users=JSON.parse(localStorage.getItem("user")) || [];
-    const existingUser=users.filter((u)=>{
-      u.username===user.username && u.password===user.password;
+    const existingUser=users.find((u)=>{
+     return u.username===user.username && u.password===user.password;
     })
     if(existingUser){
       navigate('/homepage');
