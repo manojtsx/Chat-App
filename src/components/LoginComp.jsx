@@ -4,8 +4,11 @@ import FormLabel from "./mini-components/reusable-components/FormLabel";
 import Button from "./mini-components/reusable-components/Button";
 import Heading from "./mini-components/reusable-components/Heading";
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { UserContext } from '../context/UserContext';
 
 const LoginComp = () => {
+  const {loggedInUser, setLoggedInUser} = useContext(UserContext);
   const navigate=useNavigate();
   const[user, setUser]=useState({
     username: "",
@@ -23,6 +26,7 @@ const LoginComp = () => {
     })
     if(existingUser){
       navigate('/homepage');
+      setLoggedInUser(existingUser);
     } else{
       alert("Incorrect username and password");
     }

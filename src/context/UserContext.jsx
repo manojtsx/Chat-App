@@ -3,9 +3,9 @@ import React, {useState, createContext} from 'react';
 const UserContext = createContext();
 
 const UserProvider = ({children}) =>{
-    const [user, setUser] = useState(null);
+    const [loggedInUser, setLoggedInUser] = useState(null);
     return(
-        <UserContext.Provider value={{user, setUser}}>
+        <UserContext.Provider value={{loggedInUser, setLoggedInUser}}>
             {children}
         </UserContext.Provider>
     )

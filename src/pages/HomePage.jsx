@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { useContext } from 'react';
+import { UserContext } from '../context/UserContext';
 
 const HomePage = () => {
+  const {loggedInUser} = useContext(UserContext);
   return (
-    <div>HomePage</div>
+    <div>{loggedInUser.name}</div>
   )
 }
 
