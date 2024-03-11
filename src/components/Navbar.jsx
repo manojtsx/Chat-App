@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { NavLink } from 'react-router-dom';
+import { UserContext } from '../context/UserContext';
 
 const Navbar = () => {
+  const {loggedInUser} = useContext(UserContext);
   let lists = [
     { name: "Home", link: "/" },
     { name: "About", link: "/about" },
     { name: "Chat", link: "/chat" },
-    { name: "Login", link: "/login" },
-    { name: "Register", link: "/register" }
+    { name: loggedInUser ? "Logout" : "Login", link: loggedInUser ? "/logout" : "/login" },
+    { name: loggedInUser ? loggedInUser.name : "Register", link: loggedInUser ? "/profile/:id" : "/register" }
   ]
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
