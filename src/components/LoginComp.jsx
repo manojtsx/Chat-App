@@ -6,6 +6,7 @@ import Heading from "./mini-components/reusable-components/Heading";
 import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { UserContext } from '../context/UserContext';
+import {toast} from "react-toastify";
 
 const LoginComp = () => {
   const {loggedInUser, setLoggedInUser} = useContext(UserContext);
@@ -25,13 +26,14 @@ const LoginComp = () => {
      return u.username===user.username && u.password===user.password;
     })
     if(existingUser){
+      toast.success("Logged in Successfully");
       navigate('/homepage');
       setLoggedInUser(existingUser);
     } else{
-      alert("Incorrect username and password");
+      toast.error("Incorrect username and password");
     }
   } catch(error){
-    console.error(error);
+    toast.error("Error: ", error.message)
   }
     
   };

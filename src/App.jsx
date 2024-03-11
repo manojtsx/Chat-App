@@ -8,10 +8,13 @@ import Footer from "./components/Footer";
 import GoToTop from "./components/mini-components/reusable-components/GoToTop";
 import HomePage from "./pages/HomePage";
 import Logout from "./components/mini-components/Logout";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
     <>
       <BrowserRouter>
+        <ToastContainer />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
