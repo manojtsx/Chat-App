@@ -6,13 +6,18 @@ import Heading from "./mini-components/reusable-components/Heading";
 import {useNavigate} from "react-router-dom";
 
 const RegisterComp = () => {
+  let userLength = 0;
+  if(localStorage.getItem("user")){
+    userLength = JSON.parse(localStorage.getItem("user")).length;
+  }
   const navigate = useNavigate();
   const [user, setUser] = useState({
+    id : userLength,
     name : "",
     username : "",
     password : "",
     nickname: ""
-    })
+    });
 
   const registerUser = (event) => {
     event.preventDefault();
