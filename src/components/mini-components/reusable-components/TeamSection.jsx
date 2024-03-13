@@ -9,7 +9,7 @@ const TeamSection = () => {
         <div className="flex flex-col items-center">
           <div className="w-full grid place-items-center overflow-hidden mb-4 sm:w-72">
             <img
-              src="https://scontent.fktm14-1.fna.fbcdn.net/v/t39.30808-6/431004073_972462914508193_8592377437422702547_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=dNQ34Q6wODkAX9jRvQl&_nc_ht=scontent.fktm14-1.fna&oh=00_AfBlZ2Fd0JIa7v4LCTA0Gkxhva2xemx88Lkx3rIaCYdE7A&oe=65ECA5B9"
+              src="https://scontent.fktm14-1.fna.fbcdn.net/v/t39.30808-6/431475681_973636147724203_7081139114866378544_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=_Qkk1mLLw_UAX90WF6K&_nc_oc=AQkXtMXOoa_RiAUPRpucpAA8vr38UgtGduAKw-bCE_4eVguyuM4BXoiFPve0DbMxLTI&_nc_ht=scontent.fktm14-1.fna&oh=00_AfArE_dETtv_RPsa2FgtBfuw4UKk6D6Dur7vHBK4YBto0Q&oe=65F6F6BB"
               alt=""
               className="border rounded-lg transition-scale duration-500 hover:scale-110"
             />
@@ -44,7 +44,7 @@ const TeamSection = () => {
           <div className="flex flex-col items-center">
             <div className="w-full grid place-items-center overflow-hidden mb-4 sm:w-72">
               <img
-                src="https://scontent.fktm14-1.fna.fbcdn.net/v/t39.30808-1/347096561_285611003799941_5143806039165241926_n.jpg?stp=c0.0.320.320a_dst-jpg_p320x320&_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=rwRfGOlN7FYAX8O9-Px&_nc_ht=scontent.fktm14-1.fna&oh=00_AfDXuCNHjKqkXDa59u2lO4fphmY7O0JVU-gEEgoUWsHiHA&oe=65ECDD32"
+                src="https://scontent.fktm14-1.fna.fbcdn.net/v/t39.30808-1/347096561_285611003799941_5143806039165241926_n.jpg?stp=c0.0.320.320a_dst-jpg_p320x320&_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ANz9X714Y-EAX_Lt9nk&_nc_ht=scontent.fktm14-1.fna&oh=00_AfBj8sU2kKp4wtLpvCLjbFnM8Yrf12DbedDWOMrMcQEC4A&oe=65F6C072"
                 alt=""
                 className="border rounded-lg transition-scale duration-500 hover:scale-110"
               />
