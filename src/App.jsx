@@ -13,6 +13,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Chat from "./pages/Chat";
 import ProfilePage from "./pages/user/ProfilePage";
 import ProfileErrorPage from "./pages/user/ProfilePage";
+import ProfileEditPage from "./pages/user/ProfileEditPage";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/homepage" element={<HomePage />} />
           <Route path="/profile" element={<ProfileErrorPage />}>
               <Route path=":id" element={<ProfilePage />} />
+              <Route path="edit/:id" element={< ProfileEditPage/>} />
           </Route>
         </Routes>
         <Footer />
