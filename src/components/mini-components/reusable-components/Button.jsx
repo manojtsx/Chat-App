@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Button = ({type,children}) => {
+const Button = ({type,onClick,children}) => {
     let className = "";
     if(type === "reset"){
         className = "px-4 py-2 bg-gradient-to-r from-red-500 to-red-700 text-gray-200 rounded-md hover:from-red-700 hover:to-red-900" 
@@ -16,7 +16,7 @@ const Button = ({type,children}) => {
     }
     return (
         <>
-            <button className={className} type={type}>{children}</button>
+            <button className={className} type={type} onClick={onClick}>{children}</button>
         </>
     )
 }
