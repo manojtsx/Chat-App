@@ -30,8 +30,8 @@ function App() {
           <Route path="/chat" element={<Chat />} />
           <Route path="/homepage" element={<HomePage />} />
           <Route path="/profile" element={<ProfileErrorPage />}>
-              <Route path="edit/:id" element={<ProfileEditPage />} />
-              <Route path=":id" element={<ProfilePage />} />
+            <Route path="edit/:id" element={<ProfileEditPage />} />
+            <Route path=":id" element={<ProfilePage />} />
           </Route>
         </Routes>
         <Footer />
