@@ -6,7 +6,8 @@ import { UserContext } from "../context/UserContext";
 
 const Navbar = () => {
   const { loggedInUser } = useContext(UserContext);
-  let lists = [
+  const [lists, setLists] = useState([]);
+  useEffect(()=>{setLists([
     { name: "Home", link: "/" },
     { name: "About", link: "/about" },
     { name: "Chat", link: "/chat" },
@@ -18,7 +19,8 @@ const Navbar = () => {
       name: loggedInUser ? loggedInUser.name : "Register",
       link: loggedInUser ? `/profile/${loggedInUser.id}` : "/register",
     },
-  ];
+  ]);
+},[loggedInUser]);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const toggleMenu = () => {
@@ -48,30 +50,44 @@ const Navbar = () => {
         </span>
         <ul className="hidden sm:flex justify-center gap-12">
           {lists.map((list, index) => {
+            if (list.name == "Chat" && loggedInUser) {
             return (
               <li
                 key={index}
                 className="px-4 h-12 flex items-center hover:bg-pink-700"
-              >
+              onClick={handleChatClick}>
                 <NavLink to={list.link}>{list.name}</NavLink>
               </li>
-            );
+            )
+            } else if(list.name!= "Chat"){ 
+              return (
+                <li
+                  key={index}
+                  className="px-4 h-12 flex items-center hover:bg-pink-700"
+                >
+                  <NavLink to={list.link}>{list.name}</NavLink>
+                </li>
+              );
+            }
+              else {
+                return null;
+              }
           })}
         </ul>
       </div>
       {isMenuOpen ? (
         <ul className="bg-gradient-to-r from-pink-500 to-pink-600 absolute w-full">
           {lists.map((list, index) => {
-            if (list.name == "chat") {
+            if (list.name == "Chat" && loggedInUser) {
               return(
               <li
                 key={index}
                 className=" w-full shadow-sm p-2 flex justify-center hover:bg-pink-700"
                 onClick={handleChatClick}>
-                  {(loggedInUser) ?<NavLink to={list.link}>{list.name}</NavLink> : "Chat"}
+                  <NavLink to={list.link}>{list.name}</NavLink>
               </li>
               )
-            } else {
+            } else if(list.name!= "Chat"){
               return (
                 <li
                   key={index}
@@ -80,6 +96,8 @@ const Navbar = () => {
                   <NavLink to={list.link}>{list.name}</NavLink>
                 </li>
               );
+            } else {
+              return null;
             }
           })}
         </ul>
